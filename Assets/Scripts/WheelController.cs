@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WheelController : MonoBehaviour
 {
+    [NotNull]
     public WheelCollider[] poweredWheels;
     public float motorTorque = 1000;
 
