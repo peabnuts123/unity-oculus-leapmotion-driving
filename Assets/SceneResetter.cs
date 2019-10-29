@@ -9,8 +9,6 @@ public class SceneResetter : MonoBehaviour
     {
         if (Input.GetButtonDown("Exit"))
         {
-            Debug.Log("Yeah exit GET'EM");
-
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
 #else
@@ -20,7 +18,6 @@ public class SceneResetter : MonoBehaviour
         }
         else if (Input.GetButtonDown("Restart"))
         {
-            Debug.Log("Restarting scene...");
             Scene activeScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(activeScene.buildIndex);
         }

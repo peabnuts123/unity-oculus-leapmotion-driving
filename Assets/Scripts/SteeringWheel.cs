@@ -100,9 +100,11 @@ public class SteeringWheel : MonoBehaviour
 
         if (angleCount > 0)
         {
-            float angle = angleSum / angleCount;
-            this.wheelTransform.Rotate(Vector3.up, angle, Space.Self);
-            UpdateCurrentAngle(this.currentAngle + angle);
+            // Clamp rotation to a not overextend wheels
+            float maxRotation = 30 * this.steeringRatio;
+            float targetAngle = Mathf.Clamp(this.currentAngle + (angleSum / angleCount), -maxRotation, maxRotation);
+            this.wheelTransform.Rotate(Vector3.up, targetAngle - this.currentAngle, Space.Self);
+            UpdateCurrentAngle(targetAngle);
         }
     }
 
