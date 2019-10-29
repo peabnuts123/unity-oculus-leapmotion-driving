@@ -81,7 +81,7 @@
                 return;
             }
 
-            Debug.Log(log);
+            Debug.Log($"[NotNullFinder] {log}");
         }
     }
 }
