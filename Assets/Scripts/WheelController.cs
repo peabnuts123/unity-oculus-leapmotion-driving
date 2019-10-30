@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class WheelController : MonoBehaviour
 {
+    // Public references
     [NotNull]
     public WheelCollider[] poweredWheels;
     [NotNull]
     public new Rigidbody rigidbody;
+
+    // Public config
     public float motorTorque = 1000;
     public float maxSpeed = 3;
 

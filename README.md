@@ -14,6 +14,6 @@ Small project investigating development using a VR (an old Oculus Rift DK2) toge
       * [ ] Indicator
       * [ ] Hand brake
       * [ ] Radio
-      * [ ] Horn
+      * [x] Horn
       * [ ] Glove box, lol?
   * [ ] Better track / environment

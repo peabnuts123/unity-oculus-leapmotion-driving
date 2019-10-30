@@ -2,7 +2,7 @@ using Leap.Unity.Interaction;
 using UnityEngine;
 
 
-public class SteeringWheel : MonoBehaviour
+public class SteeringWheelController : MonoBehaviour
 {
     // Public references
     [NotNull]
@@ -11,6 +11,8 @@ public class SteeringWheel : MonoBehaviour
     public Transform wheelTransform;
     [NotNull]
     public WheelCollider[] wheelColliders;
+
+    // Public config
     public float steeringRatio = 12;
 
     // Private state
